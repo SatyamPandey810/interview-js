@@ -702,13 +702,27 @@
 // console.log(user2.greet());
 
 
-const person={
-    greet(){
-        return 'Hello there'
+// const person={
+//     greet(){
+//         return 'Hello there'
+//     }
+// }
+// let user=Object.create(person)
+// user.name='satyam'
+// console.log(user.name);
+// console.log(user.greet());
+
+const user = {
+    logUser() {
+        return `${this.name} admin logged`
     }
 }
-let user=Object.create(person)
-user.name='satyam'
-console.log(user.name);
-console.log(user.greet());
+let admin = Object.create(user)
+admin.name = "satyam"
+
+admin.deleteUser = function (user) {
+    return `${this.name} deleted ${user}`
+}
+console.log(admin.logUser());
+console.log(admin.deleteUser("ram"));
 
