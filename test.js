@@ -712,17 +712,211 @@
 // console.log(user.name);
 // console.log(user.greet());
 
-const user = {
-    logUser() {
-        return `${this.name} admin logged`
-    }
-}
-let admin = Object.create(user)
-admin.name = "satyam"
+// const user = {
+//     logUser() {
+//         return `${this.name} admin logged`
+//     }
+// }
+// let admin = Object.create(user)
+// admin.name = "satyam"
 
-admin.deleteUser = function (user) {
-    return `${this.name} deleted ${user}`
-}
-console.log(admin.logUser());
-console.log(admin.deleteUser("ram"));
+// admin.deleteUser = function (user) {
+//     return `${this.name} deleted ${user}`
+// }
+// console.log(admin.logUser());
+// console.log(admin.deleteUser("ram"));
+
+// function person(name) {
+//     return this.name = name
+// }
+// person.prototype.greet = function () {
+//     return `hello my name is ${this.name}`
+// }
+// let user1 = new person("gangadhar")
+// console.log(user1.greet());
+
+
+
+// class person {
+//     constructor(name) {
+//         return this.name = name
+//     }
+//     greet = function () {
+//         return `hello my name is ${this.name}`
+//     }
+// }
+
+// let user1 = new person("jairam")
+// console.log(user1.greet());
+
+// let person={
+//     firstName:"deepak",
+//     firstName:"ram"
+// }
+// console.log(person.firstName);
+
+// let object = {
+//     firstName: "john"
+// }
+// let object2 = {
+//     age: 23
+// }
+// let object3 = {
+//     hobby: ['cricket']
+// }
+
+// object2.__proto__ = object
+// console.log(object2.firstName, object2.age);
+
+// object.age = object2.age
+// console.log(object);
+// for (const key in object2) {
+//     object[key] = object2[key]
+
+// }
+// console.log(object);
+
+// Object.assign(object, object2, object3)
+// console.log(object);
+
+// structure clone
+// let a={
+//     firstName:"john"
+// }
+// let b=structuredClone(a)
+// console.log(b===a);
+
+
+//========================================= Method overriding, static methods
+// class Aniaml {
+//     sepak() {
+//         return 'animal makes sound'
+//     }
+// }(
+// class Dog extends Aniaml {
+//     sepak() {
+//         return 'dog makes sound'
+//     }
+// }
+
+// let c = new Aniaml()
+// let d=new Dog()
+
+// console.log(c.sepak());
+// console.log(d.sepak());
+
+// class Car {
+//     carName = "TATA";
+//     carModel = 2022
+//     constructor(name, model) {
+//         console.log('constructor called');
+//         this.carName = name
+//         this.carModel = model
+//     }
+
+//     getCarName() {
+//         console.log(this.carName);
+//         console.log(this.carModel);
+//     }
+// }
+
+// let c = new Car("mahindra", 2000)
+// console.log(c.getCarName());
+
+// let A = class {
+//     // carName = "TATA"
+//     ["car" + "Name"]='tata'    // computed name
+// } 
+
+// let a = new A()
+// console.log(a);
+
+// setter and getter
+
+// class Car {
+//     carName = "TATA"
+
+//     get getCarName() {
+//         console.log(this.carName);
+//     }
+// }
+// let a = new Car()
+// console.log(a.getCarName);
+
+
+// class Car {
+//     carName = "TATA"
+
+//   set setCarName(name) {
+//         return this.carName = name
+//     }
+// }
+// let a = new Car()
+// console.log(a.setCarName("maruti"));                  
+// console.log(a.carName);
+// console.log(a.setCarName="mahindra");
+
+// class ParentClass {
+//     className = "parent class";
+
+//     getParentName() {
+//         return this.className
+//     }
+// }
+
+// class ChildClass extends ParentClass {
+//     childName = "child class"
+//     getChildName() {
+//         return this.className;
+//     }
+// }
+
+
+// let a = new ChildClass()
+
+// console.log(a.getChildName());
+
+
+// class ParentClass {
+//     className = "parent class";
+
+//     getParentName() {
+//         return this.className
+//     }
+// }
+
+// class ChildClass extends ParentClass {
+//     className = "child class";
+
+//     getParentName(test) {
+//         return this.className +test
+//     }
+// }
+// let a = new ChildClass()
+
+// console.log(a.className);
+// console.log(a.getParentName("dhjfkd"));
+
+
+// method overloading (not support in js)
+// class Area {
+//     areaOf(redius) {
+//         console.log(Math.PI * redius * redius);
+
+//     }
+//     areaOf(length, breadth) {
+//         console.log(length * breadth);
+
+//     }
+// }
+
+// let a = new Area()
+// console.log(a);
+
+
+
+
+
+
+
 
