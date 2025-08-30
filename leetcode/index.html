@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let a = [10, 20]
+        // let b = [30, 40]
+        // // console.log([...a, ...b]);
+
+        // function add(...args) {
+        //     console.log(args[0] + args[1]);
+
+        // }
+        // add(...a,...b)
+
+
+
+        // let createFunction = function (n) {
+        //     return function () {
+        //        return n++
+        //     }
+        // }
+        // let a = createFunction(10)
+        // console.log(a());
+        // console.log(a());
+        // console.log(a());
+
+
+        var map = function (arr, fn) {
+            const res = new Array(arr.length);
+
+            for (const i in arr) {
+                res[i] = fn(arr[i], Number(i))
+            }
+            return res;
+        }
+
+let a=map()
+console.log(a());
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+
+    <!-- <script src="./../advanceFunction.js"></script> -->
+    <!-- <button onclick="buttonClick(event)">Click me</button> -->
+    <button id="hit">Click me</button>
+    <script>
+        // function buttonClick(event) {
+        //     console.log(event.target);
+        //     console.log("hiit me")
+        // }
+
+        let button = document.getElementById("hit")
+        // buttton.onclick = function () {
+        //     console.log("hiit me")
+        // }
+        // console.dir(buttton);
+        button.addEventListener("click", () => {
+            console.log("hit");
+        })
+
+    </script>
+</body>
+
+</html>
