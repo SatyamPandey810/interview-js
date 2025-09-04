@@ -914,9 +914,106 @@
 // console.log(a);
 
 
+// super keyword
+// class Parent {
+//     parentClassName;
+//     testing = "testing"
+//     constructor(name) {
+//         this.parentClassName = name
+//     }
+
+//     getParentClass() {
+//         console.log("working");
+//         console.log(this.testing);
+//         return this.parentClassName
+//     }
+// }
+
+// class Child extends Parent {
+//     testing = "testing child";
+
+//     constructor(name) {
+//         super(name)
+//     }
+//     getParentClass() {
+//         console.log(super.getParentClass());
+//         console.log(this.testing);
+
+//         return this.parentClassName + " " + "child class name"
+//     }
+// }
+
+// let p = new Child("parent class name");
+// // console.log(p);
+// console.log(p.getParentClass("movie"));
 
 
 
+
+// static properties and methods-------------------------------------------------
+
+// class Emp {
+//     static counter = 0;    //static property
+//     constructor() {
+//         Emp.counter++
+//     }
+
+//   static getTotalinstance(){
+//         // return Emp.counter
+//         return this.counter
+
+//     }
+// }
+
+// let a = new Emp()
+// console.log(a);
+// let b = new Emp()
+// let c = new Emp()
+// console.log(Emp.getTotalinstance());
+
+// console.log(Emp.counter);
+
+
+//---------------------------------- Object methods: assign, freeze, seal, entries, fromEntries, values, keys
+
+// const a={
+//     a:"john"
+// }
+
+// const b={
+//     b:"doe"
+// }
+// Object.assign(a,b)
+// console.log(a);
+
+// freeze                       no add no delete no update
+
+// const a={
+//     name:"john"
+// }
+// Object.freeze(a)
+// a.name="doe"
+// console.log(a);
+
+// seal       allowed only update not deleted and add
+// const obj={
+//     name:"satyam"
+// }
+// Object.seal(obj)
+
+// delete obj.name
+// obj.age=24
+// obj.name="pandey" 
+// console.log(obj);
+
+// entries convert into array
+    // let obj={
+    //     name:"john",
+    //     age:29
+    // }
+
+    // let a=Object.entries(obj)
+// console.log(a,typeof a);
 
 
 
